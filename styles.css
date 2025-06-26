@@ -1,0 +1,130 @@
+/* fonts links */
+
+/* Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap');
+
+/* Fraunces */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap');
+
+/***************/
+
+:root {
+    --Green500: hsl(158, 36%, 37%);
+    --Green700: hsl(158, 42%, 18%);
+
+    --Black: hsl(212, 21%, 14%);
+    --Grey: hsl(228, 12%, 48%);
+    --Cream: hsl(30, 38%, 92%);
+    --White: hsl(0, 0%, 100%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--Cream);
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 2rem;
+}
+
+.card {
+    border-radius: 10px;
+    background-color: var(--White);
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+}
+
+.card .card-image img {
+    width: 100%;
+    height: 100%;
+}
+
+.card .card-content {
+    padding: 20px 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.card .card-content p {
+    font-family: "Montserrat";
+    font-weight: 500;
+    color: var(--Grey);
+    margin-block: 1rem;
+}
+
+.card .card-content p:nth-child(1) {
+    font-size: .7em;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+}
+
+.card .card-content h1 {
+    font-family: 'Fraunces';
+    line-height: 1.7rem;
+}
+
+.card .card-content p:nth-child(3) {
+    line-height: 1.5rem;
+}
+
+.card .card-content .price {
+    display: flex;
+    align-items: center;
+    gap: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.card .card-content .price h1 {
+    font-size: 1.7rem;
+    color: var(--Green500);
+}
+
+.card .card-content button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    border: none;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    background: var(--Green500);
+    color: var(--White);
+    padding: 10px;
+    border-radius: 10px;
+
+}
+
+.card .card-content button:hover {
+    background: var(--Green700);
+}
+
+@media (width<650px) {
+    .card {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+}
+
+.attribution {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding-top: 2rem;
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
